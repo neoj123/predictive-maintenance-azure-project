@@ -1,0 +1,53 @@
+# ----------------------------------------------------------------------
+# VIRTUAL ENVIRONMENT
+# ----------------------------------------------------------------------
+# Ignore the entire virtual environment folder
+.venv/
+.pytest_cache/
+pyenv.cfg
+
+# ----------------------------------------------------------------------
+# PYTHON ARTIFACTS
+# ----------------------------------------------------------------------
+# Compiled files
+*.pyc
+__pycache__/
+
+# Distribution and packaging
+/dist/
+/build/
+*.egg-info/
+.coverage
+
+# ----------------------------------------------------------------------
+# DATA & MODEL ARTIFACTS
+# ----------------------------------------------------------------------
+# Your serialized model file (if it's large or sensitive)
+# If your model file is large, GitHub is not the best place for it.
+/model/rul_model.pkl
+
+# Temporary or large datasets
+/data/
+*.csv
+*.zip
+*.parquet
+
+# ----------------------------------------------------------------------
+# AZURE ML / CLOUD PROVISIONING SECRETS
+# ----------------------------------------------------------------------
+# Configuration files that often contain sensitive keys or URLs
+# You MUST verify that 'provision_cloud.py' does not contain secrets
+# If it contains sensitive info, consider ignoring it or cleaning it up.
+# provision_cloud.py
+
+# Local secrets or environment variables files
+.env
+*.key
+*.pem
+*.secret
+
+# ----------------------------------------------------------------------
+# IDE/EDITOR FILES (Visual Studio Code, etc.)
+# ----------------------------------------------------------------------
+.vscode/
+.idea/

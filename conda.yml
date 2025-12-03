@@ -1,0 +1,11 @@
+channels:
+- conda-forge
+dependencies:
+- python=3.10
+- pip
+- pip:
+  - scikit-learn
+  - pandas
+  - numpy
+  - joblib
+name: rul-predictor-env
