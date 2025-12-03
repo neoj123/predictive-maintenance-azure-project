@@ -43,9 +43,6 @@ deployment_environment = Environment(
 registered_env = ml_client.environments.create_or_update(deployment_environment)
 environment_path = f"azureml:{registered_env.name}:{registered_env.version}"
 print(f"Environment registered/updated: {environment_path}")
-
-
-# MODEL REGISTRATION ---
 print("\nRegistering model...")
 model = Model(
     path="model/rul_model.pkl",
@@ -55,9 +52,6 @@ model = Model(
 )
 registered_model = ml_client.models.create_or_update(model)
 print(f"Model registered: {registered_model.name} (Version {registered_model.version})")
-
-
-# ENDPOINT CREATION ---
 print(f"\nCreating Endpoint: {ENDPOINT_NAME}...")
 endpoint = ManagedOnlineEndpoint(
     name=ENDPOINT_NAME,
